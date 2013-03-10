@@ -32,11 +32,5 @@ public class HelloController {
 //        model.addAttribute("message", "HELLO!!!");
         return "office";
     }
-    @RequestMapping("/friends.html")
-    public String handlefriendsRequest(Model model) {
-
-        logger.debug("Returning index view");
-//        model.addAttribute("message", "HELLO!!!");
-        return "friends";
-    }
+   
 }
