@@ -19,14 +19,9 @@
       <put-attribute name="body"   value="/WEB-INF/views/welcome.jsp"/>      
   </definition>
   
-  <definition name="friends" extends="baseLayout">
-      <put-attribute name="title"  value="Friends"/>
-      <put-attribute name="body"   value="/WEB-INF/views/friends.jsp"/>      
-  </definition>
-  
-  <definition name="office" extends="baseLayout">
-      <put-attribute name="title"  value="Office"/>
-      <put-attribute name="body"   value="/WEB-INF/views/office.jsp"/>      
-  </definition>
-  
+<!--   <definition name="friends" extends="baseLayout"> -->
+<!--       <put-attribute name="title"  value="Friends"/> -->
+<!--       <put-attribute name="body"   value="/WEB-INF/views/friends.jsp"/>       -->
+<!--   </definition> -->
+   
 </tiles-definitions>
