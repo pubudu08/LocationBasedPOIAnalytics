@@ -8,29 +8,22 @@ import org.springframework.ui.Model;
 
 
 @Controller
-public class HelloController {
+public class DefaultController {
     protected final Logger logger = Logger.getLogger(getClass());
 
-    @RequestMapping("/login.html")
+    @RequestMapping("/login")
     public String handleLoginRequest(Model model) {
-
         logger.debug("Returning index view");
-        model.addAttribute("message", "HELLO!!!");
-        return "loginpage";
+        return "login";
     }
-    @RequestMapping("/welcome.html")
+    
+    @RequestMapping("/welcome")
     public String handleDefaultRequest(Model model) {
 
         logger.debug("Returning index view");
-//        model.addAttribute("message", "HELLO!!!");
+        model.addAttribute("message", "HELLO!!!");
         return "welcome";
     }
-    @RequestMapping("/office.html")
-    public String handleOfficeRequest(Model model) {
 
-        logger.debug("Returning index view");
-//        model.addAttribute("message", "HELLO!!!");
-        return "office";
-    }
    
 }
