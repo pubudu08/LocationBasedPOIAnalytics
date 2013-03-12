@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="spring.mvc.analytics.models.User" table="user">
+		<id name="userNo" column="User_No" type="java.lang.Integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="firstName" type="java.lang.String">
+			<column name="FIRST_NAME" not-null="false" />
+		</property>
+		<property name="lastName" type="java.lang.String">
+			<column name="LAST_NAME" not-null="false" />
+		</property>
+		<property name="birthDate" type="java.sql.Date">
+			<column name="BIRTH_DATE" not-null="true" unique="false" />
+		</property>
+		<property name="hireDate" type="java.sql.Date">
+			<column name="HIRE_Date" not-null="false" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="PASSWORD" not-null="true" />
+		</property>
+		<property name="gender" column="GENDER">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">spring.mvc.analytics.models.Gender</param>
+			</type>
+		</property>
+		<property name="active" type="java.lang.Boolean">
+			<column name="ACTIVE" not-null="true" />
+		</property>
+		<many-to-one name="userRole" class="spring.mvc.analytics.models.UserRole"
+			column="USER_ROLE_ID" cascade="all" />
+
+		<!-- <property name="currentDepartmentId" type="java.lang.String" -->
+		<!-- column="CURRENT_DEPARTMENT" /> -->
+		<!-- <property name="currentDesignationId" type="java.lang.Long" -->
+		<!-- column="CURRENT_DESIGNATION" /> -->
+		<!-- <set name="designations" table="EMPLOYEE_DESIGNATION" cascade="merge" -->
+		<!-- lazy="true"> -->
+		<!-- <key column="EMP_NO" /> -->
+		<!-- <many-to-many column="DESIGNATION_ID" -->
+		<!-- class="com.iit.rapterhr.model.Designation" fetch="select" /> -->
+		<!-- </set> -->
+		<!-- <set name="departments" table="EMPLOYEE_DEPARTMENT" cascade="merge" -->
+		<!-- lazy="true"> -->
+		<!-- <key column="EMP_NO" /> -->
+		<!-- <many-to-many column="DEPT_NO" class="com.iit.rapterhr.model.Department" -->
+		<!-- fetch="select" /> -->
+		<!-- </set> -->
+
+	</class>
+</hibernate-mapping>

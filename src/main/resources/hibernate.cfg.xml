@@ -11,12 +11,14 @@
 		<property name="hibernate.connection.password">root</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="show_sql">true</property>
-			<mapping resource="UserRole.hbm.xml" />
+		
+		<mapping resource="UserRole.hbm.xml" />
+		<mapping resource="User.hbm.xml" />
 		<!-- <mapping resource="Department.hbm.xml" /> -->
 		<!-- <mapping resource="Employee.hbm.xml" /> -->
 		<!-- <mapping resource="Salaries.hbm.xml" /> -->
 		<!-- <mapping resource="Designation.hbm.xml" /> -->
 		<!-- <mapping resource="Title.hbm.xml" /> -->
-	
+
 	</session-factory>
 </hibernate-configuration>

@@ -181,7 +181,7 @@
 					</components>
 					<componentProperties>
 						<drop>true</drop>
-						<configurationfile>src/main/webapp/resources/hibernate.cfg.xml</configurationfile>
+						<configurationfile>src/main/resources/hibernate.cfg.xml</configurationfile>
 					</componentProperties>
 				</configuration>
 				<dependencies>

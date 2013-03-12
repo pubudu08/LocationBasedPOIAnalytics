@@ -29,6 +29,8 @@
 	</beans:bean>
 	<context:component-scan base-package="spring.mvc.analytics" />
 
-<!-- 	<beans:import resource="hibernate-beans.xml" /> -->
+
+	<beans:import resource="hibernate-beans.xml" />
+	<beans:import resource="service-beans.xml"/>
 
 </beans:beans>

@@ -30,32 +30,40 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="mappingResources">
 			<list>
-<!-- 				<value>Department.hbm.xml</value> -->
-<!-- 				<value>Employee.hbm.xml</value> -->
-<!-- 				<value>Salaries.hbm.xml</value> -->
-<!-- 				<value>Designation.hbm.xml</value> -->
-<!-- 				 <value>UserRole.hbm.xml</value> -->
+				<value>UserRole.hbm.xml</value>
+				<value>User.hbm.xml</value>
+				<!-- <value>Department.hbm.xml</value> -->
+				<!-- <value>Employee.hbm.xml</value> -->
+				<!-- <value>Salaries.hbm.xml</value> -->
+				<!-- <value>Designation.hbm.xml</value> -->
+
 			</list>
 		</property>
 		<property name="hibernateProperties" ref="hibernateConfigProperties" />
+		
 	</bean>
 
-<!-- 	<bean id="departmentDAO" class="com.iit.rapterhr.dao.impl.DepartmentDAO"> -->
+<!-- 	<bean id="userRoleDAO" class="spring.mvc.analytics.dao.impl.UserRoleDAO"> -->
 <!-- 		<property name="sessionFactory" ref="sessionFactory" /> -->
 <!-- 	</bean> -->
+	<bean id="userDAO" class="spring.mvc.analytics.dao.impl.UserDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 
-<!-- 	<bean id="employeeDAO" class="com.iit.rapterhr.dao.impl.EmployeeDAO"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory" /> -->
-<!-- 	</bean> -->
- 
-<!-- 	<bean id="salaryDAO" class="com.iit.rapterhr.dao.impl.SalaryDAO"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory" /> -->
-<!-- 	</bean> -->
+	<!-- <bean id="departmentDAO" class="com.iit.rapterhr.dao.impl.DepartmentDAO"> -->
+	<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+	<!-- </bean> -->
 
-<!-- 	<bean id="designationDAO" class="com.iit.rapterhr.dao.impl.DesignationDAO"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory" /> -->
-<!-- 	</bean> -->
-<!-- 	 <bean id="userAuthDAO" class="com.iit.rapterhr.dao.impl.UserRoleDAO"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory" /> -->
-<!-- 	</bean> -->
+	<!-- <bean id="employeeDAO" class="com.iit.rapterhr.dao.impl.EmployeeDAO"> -->
+	<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="salaryDAO" class="com.iit.rapterhr.dao.impl.SalaryDAO"> -->
+	<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="designationDAO" class="com.iit.rapterhr.dao.impl.DesignationDAO"> -->
+	<!-- <property name="sessionFactory" ref="sessionFactory" /> -->
+	<!-- </bean> -->
+
 </beans>
