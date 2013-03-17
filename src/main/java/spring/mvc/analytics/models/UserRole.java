@@ -2,6 +2,9 @@ package spring.mvc.analytics.models;
 
 public class UserRole {
 	
+	public static final String PROPERTY_USERROLE_ID = "userRoleID";
+	public static final String PROPERTY_USERROLE_TYPE = "UserRoleType";
+	
 	private int userRoleID;
 	private String UserRoleType;
 	

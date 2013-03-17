@@ -6,5 +6,6 @@ import spring.mvc.analytics.models.UserRole;
 public interface IUserRoleDAO {
 	
 	List<UserRole> getUserRoles();
+	UserRole getUserRoleById(int id);
 
 }

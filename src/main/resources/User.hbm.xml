@@ -26,6 +26,11 @@
 				<param name="enumClass">spring.mvc.analytics.models.Gender</param>
 			</type>
 		</property>
+		<property name="accountStatus" column="STATUS">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">spring.mvc.analytics.models.Status</param>
+			</type>
+		</property>
 		<property name="active" type="java.lang.Boolean">
 			<column name="ACTIVE" not-null="true" />
 		</property>

@@ -20,17 +20,12 @@ public class UserService {
 	@Autowired
 	private UserDAO userDAO;
 	
-
-
-	public List<User> populateUsersByID() {
-		// TODO Auto-generated method stub
-		return null;
+	public User populateUsersByID(int id) {	
+		return userDAO.getUserByID(id);
 	}
 
-
-	public List<User> populateUsers() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<User> populateUsers() {		
+		return userDAO.getAllEmployees();
 	}
 	
 	

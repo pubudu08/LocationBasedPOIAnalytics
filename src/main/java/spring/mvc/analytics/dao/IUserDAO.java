@@ -6,5 +6,6 @@ import spring.mvc.analytics.models.User;
 public interface IUserDAO {
 	
 	List<User> getAllEmployees();
+	User getUserByID(int id);
 
 }

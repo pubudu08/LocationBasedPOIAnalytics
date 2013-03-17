@@ -8,31 +8,24 @@
 
 	<beans:import resource="hibernate-beans.xml" />
 
-	<security:global-method-security
-		secured-annotations="enabled" />
-
-	<security:http auto-config="true" use-expressions="true">
-<!-- 		<intercept-url pattern="/login*" access="isAuthenticated()" /> -->
-<!-- 		<intercept-url pattern="/login*" access="permitAll" /> -->
-<!-- 		<intercept-url pattern="/logoutSuccess*" access="isAuthenticated()" /> -->
-
-		<intercept-url pattern="/css/**" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/js/**" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/img/**" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/resources/**" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/add*" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/edit*" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/delete*" access="hasRole('ROLE_ADMIN')" />
-<!-- 		<intercept-url pattern="/**" -->
-<!-- 			access="hasRole('ROLE_ADMIN','ROLE_USER')" /> -->
-
-		<form-login login-page="/login" default-target-url="/welcome"
-			authentication-failure-url="/loginfailed" />
-		<logout logout-success-url="/login" logout-url="/j_spring_security_logout" />
-		<security:access-denied-handler
-			error-page="/accessDenied" />
-	</security:http>
-
+	 <http auto-config="true" use-expressions="true">
+        <intercept-url pattern="/login" filters="none" />
+        <intercept-url pattern="/logout" filters="none" />
+        <intercept-url pattern="/signup**" filters="none" />
+        <intercept-url pattern="/resources/**" filters="none" />
+        <intercept-url pattern="/favicon**" filters="none" />
+        <intercept-url pattern="/" access="hasAnyRole('ROLE_USER','ROLE_MANAGER')"/>
+<!--         <intercept-url pattern="/html5expense/expenses/approvals" access="hasRole('ROLE_MANAGER')" /> -->
+<!--         <intercept-url pattern="/html5expense/expense/**/state**" access="hasRole('ROLE_MANAGER')" /> -->
+        <intercept-url pattern="/**" access="isAuthenticated()" />
+        <form-login login-page="/login" default-target-url="/welcome"
+            authentication-failure-url="/loginfailed" />
+        <logout logout-success-url="/logout" />
+        <session-management invalid-session-url="/sessiontimeout" >
+            <concurrency-control max-sessions="1" />
+        </session-management>
+    </http>
+    
 	<beans:bean id="webexpressionHandler"
 		class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
 
@@ -41,9 +34,9 @@
 			<security:password-encoder hash="md5" />
 			<security:jdbc-user-service
 				data-source-ref="dataSource"
-				users-by-username-query="select EMP_NO, PASSWORD,ACTIVE from employee where employee.EMP_NO = ?"
+				users-by-username-query="select User_No, PASSWORD,ACTIVE from USER where user.User_No = ?"
 
-				authorities-by-username-query="select e.EMP_NO, ur.USERROLE from employee e, userrole ur where ur.USER_ROLE_ID=e.USER_ROLE_ID and e.EMP_NO = ?" />
+				authorities-by-username-query="select u.User_No, ur.USER_ROLE from user u, userrole ur where ur.USER_ROLE_ID=u.USER_ROLE_ID and u.User_No =?" />
 		</security:authentication-provider>
 	</security:authentication-manager>
 

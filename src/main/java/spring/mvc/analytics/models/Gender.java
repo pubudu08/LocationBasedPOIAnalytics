@@ -1,15 +1,16 @@
 package spring.mvc.analytics.models;
 
 public enum Gender {
-    M("Male"), F("Female");
-    
-    String value;
+	Male(1),
+	Female(2);
 
-    private Gender(String value) {
+    int value;
+
+    private Gender(int value) {
         this.value = value;
     }
 
-    public String getValue() {
+    public int getValue() {
         return value;
     }
 }

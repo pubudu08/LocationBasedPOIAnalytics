@@ -43,9 +43,9 @@
 		
 	</bean>
 
-<!-- 	<bean id="userRoleDAO" class="spring.mvc.analytics.dao.impl.UserRoleDAO"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory" /> -->
-<!-- 	</bean> -->
+	<bean id="userRoleDAO" class="spring.mvc.analytics.dao.impl.UserRoleDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 	<bean id="userDAO" class="spring.mvc.analytics.dao.impl.UserDAO">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
