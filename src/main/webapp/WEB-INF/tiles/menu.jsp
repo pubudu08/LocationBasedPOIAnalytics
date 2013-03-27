@@ -17,7 +17,7 @@
 								<li><a class="submenu" href="submenu.html"><i class="fa-icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
 							</ul>	
 						</li>
-						<li><a href="form.html"><i class="fa-icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
+						<li><a href="maptest"><i class="fa-icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
 						<li><a href="chart.html"><i class="fa-icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
 						<li><a href="typography.html"><i class="fa-icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
 						<li><a href="gallery.html"><i class="fa-icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>

@@ -34,5 +34,10 @@
       <put-attribute name="title"  value="Location Based Point Of Interest Analysis Framework v1.0"/>
       <put-attribute name="body"   value="/WEB-INF/views/allusers.jsp"/>      
   </definition>
+  
+     <definition name="maptest" extends="baseLayout">
+      <put-attribute name="title"  value="Location Based Point Of Interest Analysis Framework v1.0"/>
+      <put-attribute name="body"   value="/WEB-INF/views/maptest.jsp"/>      
+  </definition>
    
 </tiles-definitions>

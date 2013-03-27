@@ -37,6 +37,10 @@
 			humane.log('Welcome Manager');
 		</script>
 	</sec:authorize>
+	
+	<form action="venueSearch" method="get">
+	<button type="submit" class="btn btn-primary">Search</button>
+	</form>
 
 </body>
 </html>

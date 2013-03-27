@@ -5,6 +5,7 @@
 
 	<bean id="userService" class="spring.mvc.analytics.services.UserService" />
 	<bean id="roleService" class="spring.mvc.analytics.services.RoleService" />
+
 	
 <!-- 	<bean id="departmentService" class="com.iit.rapterhr.service.DepartmentService" /> -->
 

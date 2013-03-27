@@ -8,6 +8,13 @@
 	<artifactId>LocationBasedPOIAnalytics</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
+	<repositories>
+		<repository>
+			<id>foursquareapijava</id>
+			<name>Foursquare V2 API for Java Repository</name>
+			<url>http://foursquare-api-java.googlecode.com/svn/repository</url>
+		</repository>
+	</repositories>
 
 	<name>Our Spring test project</name>
 	<properties>
@@ -16,6 +23,24 @@
 	</properties>
 
 	<dependencies>
+		<!-- foursquare-api -->
+		<dependency>
+			<groupId>fi.foyt</groupId>
+			<artifactId>foursquare-api</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<!--  twitter4j -->
+		<dependency>
+           <groupId>org.twitter4j</groupId>
+           <artifactId>twitter4j-core</artifactId>
+           <version>[3.0,)</version>
+       </dependency>
+       <dependency>
+           <groupId>org.twitter4j</groupId>
+           <artifactId>twitter4j-stream</artifactId>
+           <version>[3.0,)</version>
+       </dependency>
+		<!-- hibernate Framework -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -73,7 +98,7 @@
 			<version>3.0.5.RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -91,7 +116,7 @@
 			<version>4.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -102,7 +127,7 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>jboss</groupId>
 			<artifactId>javassist</artifactId>
@@ -144,6 +169,13 @@
 			<artifactId>tiles-template</artifactId>
 			<version>2.2.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
